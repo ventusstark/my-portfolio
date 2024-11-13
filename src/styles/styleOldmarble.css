@@ -1,0 +1,36 @@
+@keyframes shake {
+    0%, 100% { transform: translate(0, 0); }
+    10%, 30%, 50%, 70%, 90% { transform: translate(-0.2px, 0px); }
+    20%, 40%, 60%, 80% { transform: translate(0.2px, 0px); }
+}
+
+.black-body {
+    background-color: black;
+}
+
+.old-marble-body {
+    position: relative;
+    width: 100%;
+    min-height: 90vh; /* Full viewport height */
+    min-width: 200px;
+    background-image: url("../images/marble-background.jpg");
+    background-size: 500%; /* Slightly larger than the viewport */
+    /* backgroun */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    opacity: 1;
+    animation: shake 1s infinite;
+    /* aspect-ratio: 1/1; */
+}
+
+
+
+.old-marble-background-overlay {
+    background-size: 150%; /* Slightly larger than the viewport */
+    width: 120%; /* Increase to match background image scale */
+    height: 120%;
+    object-fit: cover;
+    opacity: 0.7;
+    z-index: 1;
+}

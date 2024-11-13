@@ -12,17 +12,28 @@
     font-style: normal;
 }
 
-.mainpage-title-container{
-    /* Update with your image path */
-    /* background-image: url('../images/sky_image.jpg'); 
-    background-attachment: fixed;  */
-    
-    width: 100%; /* Full width */
-    padding: 80px 0; /* Adds padding to top and bottom for spacing */
-    text-align: center; /* Center-aligns the text */
-    position: relative;
-    z-index: 1;
+.mainpage-title-container {
+    position: fixed;
+    top: 0; /* Position it at the top of the viewport */
+    left: 0;
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1; /* Keep it above the scrolling content */
+    pointer-events: none; /* Optional: allows clicks to pass through, useful if you don't need interaction */
 }
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+  
 
 @keyframes bounce {
 
@@ -62,33 +73,14 @@
     font-family: MyHonk;
     letter-spacing: 30px;
     position: relative;
-    z-index: 1;
+    margin-top: 350px;
+    z-index: 6;
 }
 
 .mainpage-title span {
     display: inline-block;
     /* animation: bounce_rotate 1.6s ease infinite; */
 }
-
-/* .mainpage-title span:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.mainpage-title span:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.mainpage-title span:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.mainpage-title span:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-.mainpage-title span:nth-child(5) {
-    animation-delay: 0.4s;
-} */
 
 video {
     position: absolute;
@@ -101,9 +93,11 @@ video {
 }
 
 
-
 .mainpage-content-container {
-    z-index: 2;
+    position: relative;
+    z-index: 2; /* Keep it above the video but below the fixed title */
+    margin-top: 900px; /* Adjust this based on the height of the title container */
+    background-color: rgb(255, 255, 255);
 }
 
 .mainpage-content h1 {

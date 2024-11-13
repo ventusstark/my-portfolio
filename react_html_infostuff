@@ -1,0 +1,46 @@
+To create React app:
+> npx create-reaact-app {name of app}
+(e.g. npx create-reaact-app my-app)
+
+
+<a> tag 
+    defines a hyperlink, which is used to link from one page to another.
+    <a 
+        href="https://www.w3schools.com">Visit W3Schools.com!
+    </a>
+
+
+<!-- List tag -->
+<li> tag
+    HTML element is used to represent an item in a list.
+
+    The box-shadow property in CSS has up to six values, but the four most common are:
+
+
+Properties:    
+    > box-shadow: ( offset-x | offset-y | blur-radius | spread-radius color )
+    For the parameters 0 0 0 0, here’s what each value means:
+
+        - Offset-X (0): The horizontal shadow position. 
+        A positive value moves the shadow to the right, a negative value to the left. 0 means no horizontal offset.
+        
+        - Offset-Y (0): The vertical shadow position. 
+        A positive value moves the shadow down, a negative value up. 0 means no vertical offset.
+    
+        - Blur Radius (0): The blur amount for the shadow. 
+        A higher value creates a softer, more blurred shadow. 0 means no blur, so the shadow has a hard edge.
+    
+        - Spread Radius (0): The size of the shadow. 
+        A positive value expands the shadow, and a negative value contracts it. 0 means no spread, so the shadow will be the same size as the element.
+
+    > height: [units: viewport height(vh)]
+        /* 1vh is equal to 1% of the height of the viewport */
+        /* 100vh means 100% of the viewport height */
+        /* Height default value is 0, so need to set height to ensure the color occupies the entire background*/
+        height: 100vh;
+
+Note:
+    - React (and JavaScript in general) uses camelCase for inline style properties. This means:
+
+CSS syntax: animation-delay
+React inline style syntax: animationDelay

@@ -10,35 +10,35 @@ function MainPage() {
     return (
         
         <div>
+
             <div className='mainpage-title-container'>
-                <video src={sky_video} autoPlay loop muted playsInline />
+                <video className='video-background' src={sky_video} autoPlay loop muted playsInline>
+                
+                </video>
                 <h1 className='mainpage-title'> 
-                    {main_title.split("").map(
-                        (character, index) => 
-                            (
-                                <span
-                                    key={index}
-                                    style={
-                                        (index !== main_title.length - 1) // Check if it's not the last character
-                                        ?   {
-                                                animation: `bounce_rotate ${bounce_duration}s ease infinite`,
-                                                animationDelay: `${index / 2 + 0.3}s`
-                                            }
-                                            
-                                        :   {
-                                                animation: `bounce ${1.0}s ease infinite`
-                                            } // Apply no animation delay for the last character
-                                    
-                                    }
-                                >
-                                    {/* // {animation: `${bounce_duration}s`} */}
-                                
-                                    {character}
-                                </span> 
+                        {main_title.split("").map(
+                            (character, index) => 
+                                (
+                                    <span
+                                        key={index}
+                                        style={
+                                            (index !== main_title.length - 1) // Check if it's not the last character
+                                            ?   {
+                                                    animation: `bounce_rotate ${bounce_duration}s ease infinite`,
+                                                    animationDelay: `${index / 2 + 0.3}s`
+                                                }
+                                            :   {
+                                                    animation: `bounce ${1.0}s ease infinite`
+                                                } // Apply no animation delay for the last character   
+                                        }
+                                    >
+                                        {character}
+                                    </span> 
+                                )
                             )
-                        )
-                    }          
+                        }          
                 </h1>
+                
             </div>
             
             <div className='mainpage-content-container'>

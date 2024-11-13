@@ -27,14 +27,14 @@ const Navbar = () => {
 
 
                     <li className='dropdown education'>
-                        <a href='/education' class="dropdown-link"> GENERAL EDUCATION 
+                        <a href='/education' class="dropdown-link"> EDUCATION 
                         <span className="arrow">&#9662;</span>
                         </a>
 
                         <ul className="dropdown-menu">
-                            <li><a href="/prisch">Primary School</a></li>
-                            <li><a href="/secsch">Secondary School</a></li>
-                            <li><a href="/juniorcollege">Post - Secondary</a></li>
+                            <li><a href="/education/primary-school">Primary School</a></li>
+                            <li><a href="//education/secondary-school">Secondary School</a></li>
+                            <li><a href="/education/post-secondary">Post - Secondary</a></li>
                         </ul>
                     </li>
 

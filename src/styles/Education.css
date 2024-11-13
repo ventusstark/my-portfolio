@@ -1,0 +1,118 @@
+
+@font-face {
+    font-family: MyHauntedFont;
+    src: url("./font_styles/ravenscroft/Ravenscroft.ttf");
+}
+
+.education-content {
+    overflow: auto;
+    min-height: 100vh;
+}
+
+.education-content h1{
+    position: relative;
+    text-align: center;
+    justify-content: center;
+
+    font-family: MyHauntedFont;
+    font-size: 80px;
+
+    letter-spacing: 5px;
+    
+    padding: 0px 10px;
+    color: rgb(141, 146, 150);
+    z-index: 2;
+}
+
+.education-content .h1-smaller{
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 35px;
+    letter-spacing: 0px;
+}
+
+.education-content .education-button-group {
+    
+    display: grid;
+    grid-template-columns: repeat(3); /* 3 rows */
+
+    /* GAP between buttons (Y-AXIS?)*/
+    gap: 40px 280px;
+
+    padding: 30px 210px;
+
+    /* Center the grid container */
+    justify-content: center;
+    
+}
+
+.primary-school-button, .secondary-school-button, .post-secondary-button {
+    position: relative;
+    
+    color:rgb(255, 255, 255);
+    opacity: 0.9;
+    
+    font-size: 60px;
+    font-family: MyHauntedFont;
+     
+    /* (padding) parameters: y-axis | x-axis */
+    padding: 30px 50px;
+
+    text-align: center;
+    text-decoration: none;
+
+    border-style: solid;
+    border-radius: 80px;
+    border-width: 10px;
+    
+    z-index: 1;
+    transition: transform 0.5s ease-out;
+}
+
+.primary-school-button {
+    background-color: rgb(22, 10, 17);
+    border-color: rgba(0, 255, 255, 0.146);
+}
+
+.secondary-school-button {
+    background-color: rgb(77, 24, 57);
+    border-color: rgb(134, 106, 146);
+}
+
+.post-secondary-button {
+    background-color: rgb(134, 33, 96);
+    border-color: rgb(222, 209, 244);
+}
+
+
+/*HOVERING CSS*/
+
+.primary-school-button:hover, 
+.secondary-school-button:hover, 
+.post-secondary-button:hover {
+    transform: scale(1.1);
+}
+
+.primary-school-button:hover{
+    box-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8), 
+    0 0 20px rgba(255, 100, 100, 0.6), 
+    0 0 30px rgba(255, 150, 150, 0.4), 
+    0 0 40px rgba(255, 200, 200, 0.2);
+}
+
+.secondary-school-button:hover{
+    box-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8), 
+    0 0 20px rgba(255, 100, 100, 0.6), 
+    0 0 30px rgba(255, 150, 150, 0.4), 
+    0 0 40px rgba(255, 200, 200, 0.2);
+}
+
+.post-secondary-button:hover{
+    box-shadow: 
+    0 0 10px rgba(255, 0, 0, 0.8), 
+    0 0 20px rgba(255, 100, 100, 0.6), 
+    0 0 30px rgba(255, 150, 150, 0.4), 
+    0 0 40px rgba(255, 200, 200, 0.2);
+}
+ 

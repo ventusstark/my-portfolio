@@ -17,13 +17,13 @@
     /* background-color: #333; */
     background: linear-gradient(45deg, #333, #1f2879);
     color: #fff;
-    padding: 0.087rem;
+    padding: 3px 20px;
     z-index: 3;
 }
 
 /* NAVBAR LEFT */
 .navbar-left .logo {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
     color: #fff;
