@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'MySourGummy';
+    src: url('./font_styles/Sour_Gummy/SourGummy-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyHonk';
+    src: url("./font_styles/Honk/Honk-Regular-VariableFont_MORF\,SHLN.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mainpage-title-container{
+    /* Update with your image path */
+    /* background-image: url('../images/sky_image.jpg'); 
+    background-attachment: fixed;  */
+    
+    width: 100%; /* Full width */
+    padding: 80px 0; /* Adds padding to top and bottom for spacing */
+    text-align: center; /* Center-aligns the text */
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes bounce {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        /* transform: translateY(-20px); */
+        transform: translateY(-20px);
+    }
+
+}
+
+@keyframes bounce_rotate {
+    0% { transform: translateY(0) rotate(0deg); }
+    5% { transform: translateY(-10px) rotate(0deg); }
+    10% { transform: translateY(-15px) rotate(0deg); }
+    15% { transform: translateY(-25px) rotate(0deg); }
+    20% { transform: translateY(-30px) rotate(60deg); }
+    25% { transform: translateY(-35px) rotate(120deg); }
+    30% { transform: translateY(-40px) rotate(180deg); }
+    35% { transform: translateY(-35px) rotate(240deg); }
+    40% { transform: translateY(-30px) rotate(300deg); }
+    45% { transform: translateY(-25px) rotate(360deg); }
+    50% { transform: translateY(0px) rotate(360deg); }
+    60% { transform: translateY(5px) rotate(360deg); }
+    70% { transform: translateY(0px) rotate(360deg); }
+    /* 75% { transform: translateY(0px) rotate(360deg); } */
+    100% { transform: translateY(0px) rotate(360deg); }
+}
+
+/*HELLO THERE*/
+.mainpage-title {
+    /*Text alignment - CENTER*/ 
+    text-align: center;
+    font-size: 150px;
+    font-family: MyHonk;
+    letter-spacing: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.mainpage-title span {
+    display: inline-block;
+    /* animation: bounce_rotate 1.6s ease infinite; */
+}
+
+/* .mainpage-title span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.mainpage-title span:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.mainpage-title span:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.mainpage-title span:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.mainpage-title span:nth-child(5) {
+    animation-delay: 0.4s;
+} */
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container without stretching */
+    z-index: -1; /* Places video behind the text */
+}
+
+
+
+.mainpage-content-container {
+    z-index: 2;
+}
+
+.mainpage-content h1 {
+    font-size: 100px;
+    font-family: MySourGummy;
+    font-style: italic;
+    margin-left: 200px;
+}
+
+.mainpage-content p {
+    /*Text alignment - CENTER*/
+    text-align: left;
+    font-size: 40px;
+    font-family: MySourGummy;
+
+    /*Set margin of paragraph AWAY FROM the RIGHT*/
+    margin-right: 700px;
+    /*Set margin of paragraph AWAY FROM the LEFT*/
+    margin-left: 200px;
+    /*TEXT JUSTIFICATION: text-align set to 'justify' */
+    text-align: justify;
+    
+}
+
+.highlight {
+    color: blue
+}

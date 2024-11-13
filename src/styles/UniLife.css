@@ -1,0 +1,112 @@
+@font-face {
+    font-family: MyGameFont;
+    src: url('./font_styles/Press_Start_2P/PressStart2P-Regular.ttf');
+}
+
+
+.uni-year-content {
+    overflow: auto;
+    min-height: 100vh;
+}
+
+/*WHERE DO WE START WITH*/
+.uni-year-content h1 {
+    position: relative;
+    font-family: MyGameFont;
+    font-size: 100px;
+
+    justify-content: center;
+    text-align: center;
+    display: flex;
+
+    /*LEFT+RIGHT PADDING of h1 
+    (parameters: y-axis | x-axis */
+    padding: 100px 500px;
+
+    color: aliceblue;
+    padding-top: 180px;
+    z-index: 0;
+}
+
+.uni-year-content .uni-year-button-group {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+
+    /* GAP between buttons (Y-AXIS?)*/
+    gap: 120px 280px;
+
+    padding: 50px 210px;
+
+    /* Center the grid container */
+    justify-content: center;
+    
+}
+
+.uni-year-button-group a:hover {
+    /*NOTE: cursor parameters; <x|y>*/
+    cursor: url("../components/components-cursors/ffcursor.png") 20 0, auto;
+}
+
+.year-1-button, .year-2-button, .year-3-button, .year-4-button {
+
+    /* (padding parameters: y-axis | x-axis) */
+    /*NOTE: x-axis parameter is minimum spacing which end of text 
+    can deal with when window is minimized*/
+    padding: 90px 0px; /*BUTTON SIZING*/
+    border-radius: 100px;
+    text-align: center; /*TEXT ALIGNMENT WITH BUTTON*/
+
+    color: aliceblue;
+    text-decoration: none;
+    font-family: MyGameFont;
+    font-size: 90px;
+    
+    transition: color 0.5s, background-color 0.5s ;
+}
+
+
+.year-1-button:hover, .year-2-button:hover, .year-3-button:hover, .year-4-button:hover{
+    background-color: rgb(250, 250, 250);
+    color: black;
+    /*CURSORS*/
+
+}
+
+
+.year-1-button {
+    background-color: rgb(203, 95, 95);
+    box-shadow: 
+        0 0 10px rgba(255, 0, 0, 0.8), 
+        0 0 20px rgba(255, 100, 100, 0.6), 
+        0 0 30px rgba(255, 150, 150, 0.4), 
+        0 0 40px rgba(255, 200, 200, 0.2); 
+}
+
+.year-2-button {
+    background-color: rgb(32, 234, 89);
+    box-shadow: 
+        0 0 10px rgba(0, 255, 0, 0.8), 
+        0 0 20px rgba(100, 255, 100, 0.6), 
+        0 0 30px rgba(150, 255, 150, 0.4),  
+        0 0 40px rgba(200, 255, 200, 0.2);  
+}
+
+.year-3-button {
+    background-color: rgb(209, 220, 48);
+    box-shadow: 
+        0 0 10px rgba(238, 255, 0, 0.8), 
+        0 0 20px rgba(238, 255, 0, 0.6), 
+        0 0 30px rgba(238, 255, 0, 0.4),
+        0 0 40px rgba(238, 255, 0, 0.2);  
+}
+
+.year-4-button {
+    background-color: rgb(33, 151, 224);
+    box-shadow: 
+        0 0 10px rgba(33, 151, 224, 0.8), 
+        0 0 20px rgba(33, 151, 224, 0.6), 
+        0 0 30px rgba(33, 151, 224, 0.4),  
+        0 0 40px rgba(33, 151, 224, 0.2); 
+}
+

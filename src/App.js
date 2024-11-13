@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import MainPage from './pages/MainPage';
+import PrimarySchool from './pages/PrimarySchool';
+import UniversityLife from './pages/UniversityLife';
+import website from './styles/website.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Router>
+        <div>
+          <Navbar/>
+
+          <div className='webpage-container'>
+            {/* Rest of your app content goes here */}
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/prisch" element={<PrimarySchool />} />
+              <Route path="/university-life" element={<UniversityLife />} />
+            </Routes>
+          </div>
+        </div>
+        
+      
+    </Router>
+
+
   );
 }
 
