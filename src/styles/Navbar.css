@@ -81,24 +81,36 @@
     align-items: center;
 }
 
-.navbar-right .cart-icon,
-.navbar-right .user-icon {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
+.navbar-right a.personal-icon{
     position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background-image: url("../images/personal_icon.png");
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+
+    /*Background image border*/
+    border: 1px solid #b8bfc2;
+    border-radius: 50%;
+
+    /*Transition - for Hover effect*/
+    transition: box-shadow 0.5s, border 0.5s;
+
 }
 
-.navbar-right .cart-count {
-    background-color: #f44336;
-    color: #fff;
-    border-radius: 50%;
-    padding: 0.2rem 0.5rem;
-    font-size: 0.8rem;
-    position: absolute;
-    top: -0.5rem;
-    right: -0.5rem;
+.navbar-right a.personal-icon:hover {
+    border: 1px solid #77c6e7;
+    box-shadow: 
+        0 0 10px rgba(33, 151, 224, 0.8), 
+        0 0 20px rgba(33, 151, 224, 0.6), 
+        0 0 30px rgba(33, 151, 224, 0.4),  
+        0 0 40px rgba(33, 151, 224, 0.2); 
 }
+
+
 
 /* NAVBAR LINKS */
 .nav-links a {
@@ -161,12 +173,9 @@
     /* TRANSITION PARAMETERS - opacity, leftscale */
     opacity: 0; /* Start fully transparent */
     transform: scaleX(0); /* Start with no width (collapsed horizontally) */
-    transform-origin: left; /* Start the effect from the left side */
 
-    /* transition time:  - opacity, leftscale */
-    transition:
-        opacity 1.0s ease-out,
-        transform 1.0s ease-out;
+    /* transition time:  - opacity */
+    transition: opacity 1.0s ease-out;
 
     /* Place behind the text */
     z-index: -1; 
@@ -177,7 +186,6 @@
     opacity: 1;
     transform: scaleX(1); /* Expands to full width */
 
-    
 }
 
 /*//////////////////////////////////////////////////////////////////////////////////////////////////////*/

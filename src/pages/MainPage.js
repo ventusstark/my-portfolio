@@ -1,5 +1,6 @@
 import '../styles/MainPage.css';
 import sky_video from '../videos/sky_video.mp4';
+import Moogle from '../components/cursor-trackers/Moogle';
 
 function MainPage() {
 
@@ -10,11 +11,10 @@ function MainPage() {
     return (
         
         <div>
-
+            <Moogle/>
             <div className='mainpage-title-container'>
-                <video className='video-background' src={sky_video} autoPlay loop muted playsInline>
+                <video className='video-background' src={sky_video} autoPlay loop muted playsInline/>
                 
-                </video>
                 <h1 className='mainpage-title'> 
                         {main_title.split("").map(
                             (character, index) => 
@@ -50,34 +50,22 @@ function MainPage() {
                     <p>
                         You may have came here to explore more about my personal life. 
                         In that case, you could start navigating across the 
-                        <span class= 'highlight'> blue navigation bar </span> on top.
+                        <span class= 'highlight-blue'> blue navigation bar </span> on top.
                         There is a lot to discover about me... My personal life, what I normally do, what I have studied, and MORE!
 
                     </p>
+
+                    <h1>
+                        WALKTHROUGH
+                    </h1>
 
                     <p>
-                        You may have came here to explore more about my personal life. 
-                        In that case, you could start navigating across the 
-                        <span class= 'highlight'> blue navigation bar </span> on top.
-                        There is a lot to discover about me... My personal life, what I normally do, what I have studied, and MORE!
+                        In case you are still wondering how my portfolio works, I have divided them into three different
+                        distinct sections, namely "About Me", "Education", and "University Life". If you hover them with your mouse,
+                        you could also find out MORE DETAILS regarding each segment across my personal life.
 
                     </p>
 
-                    <p>
-                        You may have came here to explore more about my personal life. 
-                        In that case, you could start navigating across the 
-                        <span class= 'highlight'> blue navigation bar </span> on top.
-                        There is a lot to discover about me... My personal life, what I normally do, what I have studied, and MORE!
-
-                    </p>
-
-                    <p>
-                        You may have came here to explore more about my personal life. 
-                        In that case, you could start navigating across the 
-                        <span class= 'highlight'> blue navigation bar </span> on top.
-                        There is a lot to discover about me... My personal life, what I normally do, what I have studied, and MORE!
-
-                    </p>
                     
                 </div>
             </div>

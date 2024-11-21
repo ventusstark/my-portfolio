@@ -1,0 +1,138 @@
+
+/****************************************************************************
+CURSOR ITEM: MOOGLE
+*****************************************************************************/
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes moogleLighten {
+    0%{ background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png"); }
+    33.3% { background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png"); }
+    66.67% { background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png"); }
+    100% { background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright4.png"); }
+}
+
+@keyframes moogleDim {
+    0% { background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png"); }
+    50% { background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png"); }
+    100% { background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png"); }
+}
+
+@keyframes alternateBrightness { 
+    0%, 90% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+
+    92.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    95% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");}
+    97.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    100% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+}
+
+@keyframes alternateBrightnessMax {
+
+    0%, 84% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+
+    85% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+    87.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    90% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");}
+    92.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright4.png");}
+    95% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");}
+    97.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    100% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+}
+
+
+@keyframes floatWithBrightness {
+    0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+        transform: translateY(0px);
+    }
+    5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+        transform: translateY(-10px);
+    }
+
+    /*Timeframe for image changing (blinking effect)*/
+    0%, 15% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+
+    17.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    20% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");}
+    22.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+
+    25%, 50% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+
+    55% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+    
+    57.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    60% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");}
+    62.5% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+
+    65%, 100% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+
+}
+
+@keyframes moogleAlertBrightness {
+    0% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright4.png");}
+    25% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");}
+    50% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright2.png");}
+    100% {background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright1.png");}
+}
+
+.moogle {
+
+    position: fixed;
+    /* background-image: url("../components/cursor-trackers/mooglePixel.png"); */
+    background-image: url("../components/cursor-trackers/mooglePixel-saturate-white-longBright3.png");
+
+    background-size: contain; /* Ensures the image fits within its container */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+    height: 120px; /* Adjust as needed */
+    width: 120px; /* Adjust as needed */
+
+    pointer-events: none;
+    z-index: 999;
+
+    transform: translateY(0px);
+    
+}
+
+.moogle.moving {
+    animation: moogleLighten 1s forwards,
+            moogleAlertBrightness 0.5s infinite 0.5s;
+}
+
+.moogle.slowing {
+    animation: moogleDim 0.5s forwards;
+}
+
+.moogle.stationary {
+    animation: floatWithBrightness 10s infinite ease-in-out;
+}
+
+/****************************************************************************
+CURSOR ITEM: CIRCLE
+*****************************************************************************/
+
+
+.circle {
+    --circle-size: 40px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    background-color: aqua;
+    border-radius: 50%;
+
+    top: calc((var(--circle-size) / 2) * -1);
+    left: calc((var(--circle-size) / 2) * -1);
+    pointer-events: none;
+    z-index: 999;
+
+}
+
+
+
+

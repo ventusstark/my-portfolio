@@ -4,6 +4,11 @@
     src: url("./font_styles/ravenscroft/Ravenscroft.ttf");
 }
 
+@font-face {
+    font-family: MyHauntedButton;
+    src: url("./font_styles/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+
 .education-content {
     overflow: auto;
     min-height: 100vh;
@@ -48,11 +53,11 @@
 .primary-school-button, .secondary-school-button, .post-secondary-button {
     position: relative;
     
-    color:rgb(255, 255, 255);
+    color: rgb(220, 220, 220);
     opacity: 0.9;
     
-    font-size: 60px;
-    font-family: MyHauntedFont;
+    font-size: 50px;
+    font-family: MyHauntedButton;
      
     /* (padding) parameters: y-axis | x-axis */
     padding: 30px 50px;

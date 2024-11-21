@@ -44,3 +44,24 @@ Note:
 
 CSS syntax: animation-delay
 React inline style syntax: animationDelay
+
+|--------------------------------------------------------------------------------------------|
+
+"<div/>" VS "<div> <div/>"
+
+Self-Closing Tag (<div className="my-classname"/>):
+
+    This syntax is typically used when the element has no children (no content inside it).
+    It is shorthand and cleaner for empty elements.
+    It works the same way as <div className="my-classname"></div> if the div has no children, but it’s shorter and often considered more readable in JSX.
+
+Opening and Closing Tag (<div className="my-classname"></div>):
+
+    - Used when the element might have children (content or other elements inside it).
+    - If there are no children, it will still function as an empty div, but it takes up more space.
+
+children:
+<div className="my-classname"> 
+  <p>Hello there!</p> /*Children*/
+  <span>Welcome!</span> /*Children*/
+</div>
