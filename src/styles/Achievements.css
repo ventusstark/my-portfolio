@@ -1,0 +1,26 @@
+.achievements-h1 {
+    position: relative;
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+.achievements-photo-container {
+    background-color: #333;
+    justify-content: center; /* Centers horizontally */
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+
+}
+
+.achievements-photo-container img{
+    width: 100%;
+    max-width: 400px;
+
+    height: auto;
+    
+    padding: 3px;
+
+  }
+  

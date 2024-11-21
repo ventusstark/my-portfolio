@@ -3,3 +3,15 @@
     overflow: auto;
 }
 
+.webpage-h1 {
+    position: relative;
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: underline;
+}
+
+.webpage-info {
+    position: relative;
+    text-align: center;
+}
+

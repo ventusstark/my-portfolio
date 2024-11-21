@@ -20,7 +20,7 @@ const Navbar = () => {
 
                         <ul className="dropdown-menu">
                             <li><a href="/profile">Profile</a></li>
-                            <li><a href="/achievements">Achievements</a></li>
+                            <li><a href="/about-me/achievements">Achievements</a></li>
                             <li><a href="/portfolio">Portfolio</a></li>
                         </ul>
                     </li>

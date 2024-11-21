@@ -11,6 +11,7 @@ import UniversityLife from './pages/UniversityLife';
 
 import website from './styles/website.css';
 
+import Achievements from "./pages/Achievements";
 import EducationPage from './pages/EducationPage';
 
 import Circle from './components/cursor-trackers/Circle';
@@ -38,7 +39,7 @@ function App() {
             <Routes>
               <Route path="/" element={<MainPage />} />
               
-              
+              <Route path="/about-me/achievements" element={<Achievements />} />
               
               <Route path="/education" element={<EducationPage />} />
               <Route path="/education/primary-school" element={<PrimarySchool />} />
@@ -48,6 +49,8 @@ function App() {
               
             </Routes>
           </div>
+
+
         </div>
         
       
