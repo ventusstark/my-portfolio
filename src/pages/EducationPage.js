@@ -12,7 +12,7 @@ function EducationPage() {
 
                 <div className="education-container">
                     <video autoPlay loop muted playsInline className='old-marble-background-overlay'>
-                        <source src="/videos/old_film_grain_overlay.mp4" type="video/mp4" />
+                        <source src="https://ventusstark-my-portfolio-videos-s3bucket.s3.ap-southeast-2.amazonaws.com/videos/old_film_grain_overlay.mp4" type="video/mp4" />
                     </video>
 
                     <div className='education-content'>

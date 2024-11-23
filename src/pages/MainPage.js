@@ -14,7 +14,7 @@ function MainPage() {
             <div className='mainpage-title-container'>
 
                 <video autoPlay loop muted playsInline className='video-background'  > 
-                    <source src="/videos/sky_video.mp4" type="video/mp4" />
+                <source src="https://ventusstark-my-portfolio-videos-s3bucket.s3.ap-southeast-2.amazonaws.com/videos/sky_video.mp4" type="video/mp4" />
                 </video>
                 
                 <h1 className='mainpage-title'> 
