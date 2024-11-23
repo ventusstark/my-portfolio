@@ -65,3 +65,17 @@ children:
   <p>Hello there!</p> /*Children*/
   <span>Welcome!</span> /*Children*/
 </div>
+
+
+DIFFERENCE BETWEEN:
+.mainpage-title span {}:
+    - This selector targets all <span> elements that are inside an element with the class mainpage-title.
+    - does not require the <span> elements themselves to have any specific class;
+    - just looks for <span> elements within .mainpage-title.
+and
+.mainpage-title .span {}:
+    - This selector targets elements with the class <span> that are inside an element with the class mainpage-title.
+
+NOTE: (when importing videos as background/etc)
+- Files located in the public folder of a React app cannot be imported using the import syntax. 
+- The public folder is meant for static assets that can be accessed directly via a relative URL, not imported as modules

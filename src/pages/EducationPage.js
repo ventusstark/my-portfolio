@@ -1,7 +1,7 @@
 import Education from '../styles/Education.css';
 import styleOldMarble from '../styles/styleOldmarble.css';
 
-import old_film_grain_overlay from '../videos/old_film_grain_overlay.mp4';
+
 
 function EducationPage() {
 
@@ -11,14 +11,9 @@ function EducationPage() {
             <div className='old-marble-body'> 
 
                 <div className="education-container">
-                    <video
-                        src={old_film_grain_overlay}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="old-marble-background-overlay"
-                    />
+                    <video autoPlay loop muted playsInline className='old-marble-background-overlay'>
+                        <source src="/videos/old_film_grain_overlay.mp4" type="video/mp4" />
+                    </video>
 
                     <div className='education-content'>
                         <br/>

@@ -1,5 +1,4 @@
 import '../styles/MainPage.css';
-import sky_video from '../videos/sky_video.mp4';
 import Moogle from '../components/cursor-trackers/Moogle';
 
 function MainPage() {
@@ -13,7 +12,10 @@ function MainPage() {
         <div>
             <Moogle/>
             <div className='mainpage-title-container'>
-                <video className='video-background' src={sky_video} autoPlay loop muted playsInline/>
+
+                <video autoPlay loop muted playsInline className='video-background'  > 
+                    <source src="/videos/sky_video.mp4" type="video/mp4" />
+                </video>
                 
                 <h1 className='mainpage-title'> 
                         {main_title.split("").map(
