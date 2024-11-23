@@ -78,4 +78,31 @@ and
 
 NOTE: (when importing videos as background/etc)
 - Files located in the public folder of a React app cannot be imported using the import syntax. 
-- The public folder is meant for static assets that can be accessed directly via a relative URL, not imported as modules
+- The public folder is meant for static assets that can be accessed directly via a relative URL, not imported as modules.
+(Updated 24-11-2024):
+- For video rendering in AWS Amplify, use the following steps:
+    - After app deployment in Amplify, create Amazon S3 Bucket.
+    - In the bucket, upload folders/files containing your videos.
+    - In "Permissions" tab, add bucket policy: (IMPORTANT)***
+    (example - COPY THIS ENTIRE POLICY and PASTE into the provided space):
+    {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::ventusstark-singapore-my-portfolio-s3bucket/*"
+          }
+        ]
+      }
+      
+    - Use the URL of S3 video file and replace "video" directory src with S3 url
+    (example of S3 URLs / directories)
+    React Folder directory: (e.g. <source src="/videos/old_film_grain_overlay.mp4" type="video/mp4" />)
+    S3 URL: (e.g. https://ventusstark-my-portfolio-videos-s3bucket.s3.ap-southeast-2.amazonaws.com/videos/old_film_grain_overlay.mp4)
+
+    -> replace from:
+    (e.g. <source src="/videos/old_film_grain_overlay.mp4" type="video/mp4" />)
+    to:
+    (e.g. <source src="https://ventusstark-my-portfolio-videos-s3bucket.s3.ap-southeast-2.amazonaws.com/videos/old_film_grain_overlay.mp4" type="video/mp4" />)
