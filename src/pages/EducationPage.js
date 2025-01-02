@@ -24,15 +24,15 @@ function EducationPage() {
                         <div className='education-button-group'>
 
                             
-                            <a href="/prisch" className="primary-school-button">
+                            <a href="/education/primary-school" className="primary-school-button">
                                 <div>PRIMARY SCHOOL</div>
                             </a>
 
-                            <a href="/secsch" className="secondary-school-button">
+                            <a href="/education/secondary-school" className="secondary-school-button">
                                 <div>SECONDARY SCHOOL</div>
                             </a>
 
-                            <a href="/juniorcollege" className="post-secondary-button">
+                            <a href="/education/post-secondary" className="post-secondary-button">
                                 <div>POST SECONDARY</div>
                             </a>
                         </div>
