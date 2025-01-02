@@ -42,6 +42,7 @@ function App() {
               <Route path="/about-me/achievements" element={<Achievements />} />
               
               <Route path="/education" element={<EducationPage />} />
+              
               <Route path="/education/primary-school" element={<PrimarySchool />} />
               <Route path="/education/secondary-school" element={<PrimarySchool />} />
               <Route path="/education/post-secondary" element={<PrimarySchool />} />

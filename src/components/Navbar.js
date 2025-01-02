@@ -33,7 +33,7 @@ const Navbar = () => {
 
                         <ul className="dropdown-menu">
                             <li><a href="/education/primary-school">Primary School</a></li>
-                            <li><a href="//education/secondary-school">Secondary School</a></li>
+                            <li><a href="/education/secondary-school">Secondary School</a></li>
                             <li><a href="/education/post-secondary">Post - Secondary</a></li>
                         </ul>
                     </li>
